@@ -37,10 +37,41 @@ let sum3 x =
                 sum3 x1 sum
     sum3 x 0
 
+//в
+
+
+//количество цифр данного числа взаимно-простых с делителем
+let countnum x del = 
+    let rec countnum2 x del count = 
+        if x = 0 then count
+        else 
+            if nod (x%10) del = 1 then //взаимно-простые
+                let x = x/10
+                let count = count + 1
+                countnum2 x del count
+            else 
+                let x = x/10
+                countnum2 x del count
+    countnum2 x del 0
+
+let finddel x = 
+    let rec findDel2 x del maxCount maxdel = 
+        if del = 0 then maxdel
+        else 
+            if countnum x del > maxCount && x%del=0 then
+                let maxCount = countnum x del    
+                let maxCount1 = maxCount
+                let maxdel = del
+                findDel2 x (del-1) maxCount maxdel
+            else 
+                findDel2 x (del-1) maxCount maxdel
+    findDel2 x x 0 0
+
 [<EntryPoint>]
 let main argv =
     System.Console.WriteLine("Введите число")
     let x = System.Convert.ToInt32(System.Console.ReadLine())
-    //System.Console.WriteLine("Колличество взаимно-простых с x:{0}", inc x )
+    System.Console.WriteLine("Колличество взаимно-простых с x:{0}", inc x )
     System.Console.WriteLine("Сумма цифр числа, делящихся на 3 :{0}", sum3 x )
+    System.Console.WriteLine("Делитель числа, являющийся взаимно простым снаибольшим количеством цифр данного числа. :{0}", finddel x )
     0 
