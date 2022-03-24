@@ -1,5 +1,5 @@
 ﻿open System
-//пункт а
+// а
 let nod x y =
     let rec nod1 x y z newnod= 
         if x+1 = z || y+1 = z then newnod
