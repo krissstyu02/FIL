@@ -22,10 +22,25 @@ let obh x func init =
 let inc x = 
     obh x (fun x y-> x + 1) 0
 
+//б
+
+let sum3 x = 
+    let rec sum3 x sum = 
+        if x = 0 then sum
+        else
+            if x%10%3 = 0 then
+                let sum1 = sum + x%10
+                let x1 = x/10
+                sum3 x1 sum1
+            else 
+                let x1 = x/10
+                sum3 x1 sum
+    sum3 x 0
 
 [<EntryPoint>]
 let main argv =
     System.Console.WriteLine("Введите число")
     let x = System.Convert.ToInt32(System.Console.ReadLine())
-    System.Console.WriteLine("Колличество взаимно-простых с x:{0}", inc x )
+    //System.Console.WriteLine("Колличество взаимно-простых с x:{0}", inc x )
+    System.Console.WriteLine("Сумма цифр числа, делящихся на 3 :{0}", sum3 x )
     0 
