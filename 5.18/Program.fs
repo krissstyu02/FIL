@@ -1,5 +1,5 @@
 ﻿open System
-//пункт а
+// а
 let nod x y =
     let rec nod1 x y z newnod= 
         if x+1 = z || y+1 = z then newnod
@@ -22,9 +22,10 @@ let obh x func init =
 let inc x = 
     obh x (fun x y-> x + 1) 0
 
+
 [<EntryPoint>]
 let main argv =
     System.Console.WriteLine("Введите число")
     let x = System.Convert.ToInt32(System.Console.ReadLine())
-    System.Console.WriteLine("Сумма взаимно-простых с x:{0}", inc x )
+    System.Console.WriteLine("Колличество взаимно-простых с x:{0}", inc x )
     0 
