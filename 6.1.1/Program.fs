@@ -22,8 +22,6 @@ let rec writeList = function
                        writeList tail  
 
 // Найти кол-во элементов, расположенных после последнего максимального
-
-
 //Индекс последнего максимального элемента
 let Indmax list = 
     let rec Indmax2 lint max indM indEL=

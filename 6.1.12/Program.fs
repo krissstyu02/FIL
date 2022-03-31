@@ -1,8 +1,8 @@
 ﻿// Learn more about F# at http://fsharp.org
 
-open System
 
 open System
+
 let rec readList n = 
     if n=0 then []
     else
@@ -18,6 +18,7 @@ let rec writeList = function
                        System.Console.WriteLine(head)
                        writeList tail  
 
+//максимаьный индекс
 let Indmax list = 
     let rec Indmax2 lint max indM indEL=
         match lint with
@@ -28,6 +29,7 @@ let Indmax list =
             Indmax2 t newMax newInd (indEL+1)
     Indmax2 list list.Head 0 0 
 
+//минимальный индекс
 let Indmin list = 
     let rec Indmin2 list min indM indEL=
         match list with
@@ -39,16 +41,7 @@ let Indmin list =
     Indmin2 list list.Head 0 0 
 
 
-let find_min list =
-    let rec find_min_r list current_min min_idx current_idx =
-        match list with
-        | [] -> (min_idx, current_min)
-        | h::t ->
-            let new_min = if h < current_min then h else current_min
-            let new_min_idx = if h < current_min then current_idx else min_idx
-            let new_idx = current_idx + 1
-            find_min_r t new_min new_min_idx new_idx
-    find_min_r list list.[0] 0 0
+//перевернуть 
 let turnl list=
     let rec turnl2 list new_list=
         match list with
@@ -65,10 +58,10 @@ let main argv =
    let l = readList n
    let max=Indmax l
    let min= Indmin l
-   let start=Math.Min(max,min)
-   let finish=Math.Max(min,max)
-   let piece=l.[start+1..finish-1]
-   let otvet= l.[0..start]@ (turnl piece) @ l.[finish..n-1]
+   let start=Math.Min(max,min)   //минимальный среди индексов
+   let finish=Math.Max(min,max)  //максимальный среди индексов
+   let pieces=l.[start+1..finish-1]   //точки для переворота
+   let resh= l.[0..start]@ (turnl pieces) @ l.[finish..n-1]
    Console.WriteLine("Новый список: ")
-   writeList otvet
+   writeList resh
    0 // return an integer exit code
