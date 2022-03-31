@@ -25,30 +25,30 @@ let rec writeList = function
 
 
 //Индекс последнего максимального элемента
-let Indmax lint = 
+let Indmax list = 
     let rec Indmax2 lint max indM indEL=
         match lint with
         |[]->indM
-        |h::tail -> 
+        |h::t -> 
             let newMax = if h>=max then h else max
             let newInd = if h>=max then indEL else indM
-            Indmax2 tail newMax newInd (indEL+1)
-    Indmax2 lint lint.Head 0 0 
+            Indmax2 t newMax newInd (indEL+1)
+    Indmax2 list list.Head 0 0 
 
  //Ищем длину
-let Lenght lint = 
-    let rec Lenght2 lint count =
-        match lint with 
+let Lenght list = 
+    let rec Lenght2 list count =
+        match list with 
         |[]->count
-        |h::tail->
+        |h::t->
             let newCount = count+1
-            Lenght2 tail newCount
-    Lenght2 lint 0
+            Lenght2 t newCount
+    Lenght2 list 0
 
 //ищем колличество
-let countNums lint = 
-    let indexMax =Indmax lint 
-    let result = Lenght lint - indexMax-1
+let countNums list = 
+    let indexMax =Indmax list 
+    let result = Lenght list - indexMax-1
     result
 
 
