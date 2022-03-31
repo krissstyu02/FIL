@@ -18,6 +18,8 @@ let rec writeList = function
                        System.Console.WriteLine(head)
                        writeList tail  
 
+//переставить в обратном порядке элементы массива, расположенные между его минимальным и максимальным элементами
+
 //максимаьный индекс
 let Indmax list = 
     let rec Indmax2 lint max indM indEL=
