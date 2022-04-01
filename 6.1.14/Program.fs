@@ -44,7 +44,7 @@ let main argv =
     Console.WriteLine("Введите значение начала и конца интервала")
     let a=System.Convert.ToInt32(System.Console.ReadLine())
     let b=System.Convert.ToInt32(System.Console.ReadLine())
-    Console.WriteLine("Количество элементов в интервале:{0}", count l a b)
+    Console.WriteLine("Количество элементов в интервале={0}", count l a b)
 
     
     0 // return an integer exit code
