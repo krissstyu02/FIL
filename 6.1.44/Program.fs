@@ -1,6 +1,6 @@
 ﻿// Learn more about F# at http://fsharp.org
 
-//Дан массив чисел. Необходимо проверить, чередуются ли в нем целые и вещественные числа.
+
 open System
 
 let rec readlistdouble n =
@@ -15,6 +15,8 @@ let readData =
     let n=System.Convert.ToInt32(System.Console.ReadLine())
     Console.WriteLine("Введите список: ")
     readlistdouble n
+
+//Дан массив чисел. Необходимо проверить, чередуются ли в нем целые и вещественные числа.
 
 let check (list:float list)=
     let rec check2 list b=

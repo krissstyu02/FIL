@@ -21,7 +21,9 @@ let rec writeList = function
     | (head : int)::tail -> 
                        System.Console.WriteLine(head)
                        writeList tail 
-                       
+                
+//Построить массив из элементов, делящихся на свой номер и встречающихся в исходном массиве 1 раз.
+
 let rec frequency list elem count =  //сколько раз элемент встречается в списке
     match list with
     |[] -> count

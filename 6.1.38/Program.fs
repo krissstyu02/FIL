@@ -14,6 +14,8 @@ let readData =
     Console.WriteLine("Введите список: ")
     readList n
 
+//найти количество элементов, значение которых принадлежит этому отрезку.
+
 let count list a b=
    let rec count2 list a b init=
     match list with
@@ -33,6 +35,4 @@ let main argv =
     let a=System.Convert.ToInt32(System.Console.ReadLine())
     let b=System.Convert.ToInt32(System.Console.ReadLine())
     Console.WriteLine("Количество элементов, значение которых принадлежит этому отрезку={0}", count list a b)
-
-
     0 // return an integer exit code

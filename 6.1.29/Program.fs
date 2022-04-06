@@ -23,6 +23,8 @@ let rec writeList = function
                        System.Console.WriteLine(head)
                        writeList tail  
 
+//проверить наличие максимального элемента массива в этом интервале
+
 // максимум
 let Indmax list = 
     let rec Indmax2 list max indM indEL=
