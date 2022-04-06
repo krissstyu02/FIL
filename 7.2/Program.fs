@@ -13,7 +13,7 @@ let readData() =
 let rec writelist list=
     List.iter(fun x->printfn "%O" x) list
 
-//найти индекс минимального элемента.
+//найти индекс минимального элемента
 let min list=List.findIndex(fun x->x=List.min list) list
 
 [<EntryPoint>]
