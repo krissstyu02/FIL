@@ -16,7 +16,7 @@ let readData =
     Console.WriteLine("Введите список: ")
     readlistdouble n
 
-//Дан массив чисел. Необходимо проверить, чередуются ли в нем целые и вещественные числа.
+//проверить, чередуются ли в нем целые и вещественные числа
 
 let check (list:float list)=
     let rec check2 list b=
