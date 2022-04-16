@@ -34,4 +34,21 @@ let find_file str=
     let file_name2=file3 file_name1 (int('.')) 0
     Console.WriteLine(file_name2)
 
+let function_sellection n=
+    Console.WriteLine("Введите строку: ")
+    let str= Console.ReadLine()
+    match n with
+    |"1"-> ordered str
+    |"2"-> letterA str
+    |"3"->find_file str
+[<EntryPoint>]
+let main argv =
+    Console.WriteLine("Выберите одну из трех предложенных программ:
+    1.Проверить, упорядочены ли строчные символы этой строки по возрастанию
+    2.Дана строка. Необходимо подсчитать количество букв А в строке.
+    3.Дана строка в которой записан путь к файлу. Необходимо найти
+    имя файла без расширения.")
+    let n=Console.ReadLine()|>function_sellection
+    0
+
 
