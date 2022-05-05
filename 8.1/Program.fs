@@ -1,9 +1,6 @@
-﻿// Learn more about F# at http://docs.microsoft.com/dotnet/fsharp
-// See the 'F# Tutorial' project for more help.
-
-// Define a function to construct a message to print
+﻿
 open System
-// 4 5 6 7
+
 (*Абстрактный класс «Геометрическая фигура» содержит виртуальный метод для вычисления площади фигуры.
 Разработайте для данного класса функцию вычисления площади.
 Функция должна принимать параметр типа «геометрическая фигура»
