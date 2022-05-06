@@ -3,6 +3,9 @@
 
 // Define a function to construct a message to print
 
+(*Разработать программу решающую квадратное уравнение, 
+состоящую из одной формы. Ответ выводится в RichTextBox*)
+
 
 open System
 open System.Drawing

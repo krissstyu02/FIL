@@ -3,6 +3,7 @@
 
 // Define a function to construct a message to print
 
+(*Разработать программу решающую квадратное уравнение, состоящую из одной формы. Ответ выводится в lable.*)
 open System
 open System.Drawing
 open System.IO

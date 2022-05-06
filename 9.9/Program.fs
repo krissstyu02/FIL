@@ -1,7 +1,7 @@
 ﻿// Learn more about F# at http://docs.microsoft.com/dotnet/fsharp
 // See the 'F# Tutorial' project for more help.
 
-// Разработать программу, сортирующую списки.
+// (*Дан массив А [1; 2; 3;] и массив B [4; 5; 7] скопировать последний элемент массива В в массив А*)
 
 open System
 open System.Drawing

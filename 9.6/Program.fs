@@ -1,4 +1,5 @@
 ﻿
+(*Разработать программу решающую квадратное уравнение, состоящую из одной формы. Ответ выводится в TextBox*)
 open System
 open System.Windows
 open System.Windows.Controls
