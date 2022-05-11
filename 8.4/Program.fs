@@ -5,7 +5,7 @@
 
 open System
 
-// Агент выводит лишь маленькие буквы сообщения
+// Агент выводит лишь большие буквы сообщения
 let printerAgent = MailboxProcessor.Start(fun inbox->
     // обработка сообщений
     let rec messageLoop() = async{
