@@ -60,9 +60,6 @@ type TSpasport() =
         end
 
 
-
-
-
 [<EntryPoint>]
 let main argv =
     let p1 = TSpasport(Number="X7D21070030017580", Name="Легковой седан", Category='B', EnginePower=71.2, Mass=1060,Model="ВАЗ-2103 7142261",Year_of_manufacture=2003,Body_color="Сине-зеленый",Country_export="ОТСУТСВУЕТ")
